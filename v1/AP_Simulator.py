@@ -34,7 +34,7 @@ class Simulator_App(QMainWindow):
          
         #Button to add access points 
         self.addAccessPointBtn = QPushButton("Add Access Point")
-        self.addAccessPointBtn.clicked.connect(self.tooggleAccessPoint)
+        self.addAccessPointBtn.clicked.connect(self.toggleAccessPoint)
         layout.addWidget(self.addAccessPointBtn)
 
         #QGraphics scene and view
@@ -86,7 +86,7 @@ class Simulator_App(QMainWindow):
 
             self.access_points = []  # Reset access points
     
-    def tooggleAccessPoint(self):
+    def toggleAccessPoint(self):
         """Enable or disable adding access points."""
         self.adding_access_point = not self.adding_access_point
         if self.adding_access_point:
